@@ -41,19 +41,20 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-2. The API will be available at `http://localhost:8000`
+2. The API will be available at `http://127.0.0.1:8000/docs`
 
 3. Available endpoints:
-- `GET /health` - Check service health
 - `POST /get-lab-tests` - Upload and analyze lab report images
 
 ## Testing
 
-Run the test suite:
+To test all images for ocr data:
 ```bash
 pytest test_api.py
 ```
-
-## License
-
-MIT License 
+To test a specific lab report image:
+```python
+from test_api import test_lab_report_api
+result = test_lab_report_api("path/to/your/lab_report.png")
+print(result)
+```
