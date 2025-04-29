@@ -28,6 +28,19 @@ cd <repo-name>
 ```bash
 pip install -r requirements.txt
 ```
+Dont forget to make a virtual enviorment using:
+Create and activate a virtual environment:
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Linux/macOS
+python3 -m venv venv
+source venv/bin/activate
+```
+to avoid any hassle
+
 
 3. Install Tesseract OCR:
 - Windows: Download and install from [Tesseract GitHub releases](https://github.com/UB-Mannheim/tesseract/wiki)
